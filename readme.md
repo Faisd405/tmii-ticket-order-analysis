@@ -78,26 +78,19 @@ Silakan berkontribusi dengan:
 
 ## 📚 Teori dan Metodologi
 
-### 1. Regresi Linear
-Model regresi linear digunakan untuk memprediksi nilai ekspor berdasarkan tren waktu. Model ini cocok untuk prediksi time series karena dapat menangkap tren linear dalam data.
+### 1. Forecasting (Time Series)
+Forecasting adalah proses memprediksi nilai masa depan berdasarkan data historis. Salah satu model yang digunakan adalah arima (AutoRegressive Integrated Moving Average).
 
 #### Rumus Dasar:
-```
-Y = β₀ + β₁X + ε
-```
-Dimana:
-- Y = Nilai ekspor (variabel dependen)
-- X = Waktu (variabel independen)
-- β₀ = Intercept (nilai Y ketika X = 0)
-- β₁ = Slope (perubahan Y untuk setiap unit perubahan X)
-- ε = Error term (perbedaan antara nilai prediksi dan aktual)
+- ARIMA(p, d, q)
+- p: orde autoregresi
+- d: orde diferensiasi
+- q: orde moving average
 
-#### Estimasi Parameter:
-Menggunakan metode Ordinary Least Squares (OLS):
-```
-β₁ = Σ((x - x̄)(y - ȳ)) / Σ(x - x̄)²
-β₀ = ȳ - β₁x̄
-```
+#### Komponen ARIMA:
+- AR (Autoregressive): model regresi linier
+- I (Integrated): diferensiasi data
+- MA (Moving Average): model rata-rata bergerak
 
 ### 2. Evaluasi Model
 
